@@ -1,4 +1,4 @@
-![](Pasted%20image%2020250413084148.png)
+![system_flowchart.png](../Images/system_flowchart.png)
 - Client - User or device making requests to server
 - DNS(Domain Name System) - Websites are found using domains (e.x. github.com) DNS is a collection of servers that contain the translation of these domains to IP addresses used to find the actual resources
 - CDN(Content Deliver Network) - Collection of servers that stores website static content (images, videos etc ) to increase speed of website loading incase the client is far from the host server
