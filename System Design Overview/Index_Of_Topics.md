@@ -7,6 +7,8 @@
 - Read/Write/Search API (Application Programming Interface ) - Rules that allow software (I.E. client/browsers -> server) to interact this can be *writing* new data, *reading* data, *searching* for data etc.
 - Services  (Micro-services) -  Programs separate from the server that have their own responsibility and talk to the server through an API
 - Cache (Local/Distributed) - Technique to store and retrieve frequently used data 
+  - Local meaning its stored on a single machine
+  - Distributed meaning its stored across instances on a network
 - Object Store - Storage for unstructured data ( images, videos)
 - Read/Write Replicas - Databases are replicas (copies) are used to make the database more consistent and increase performance
 	- Read replicas handle read only queries reducing load on the main system
