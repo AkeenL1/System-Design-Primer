@@ -12,4 +12,5 @@
 - Object Store - Storage for unstructured data ( images, videos)
 - Read/Write Replicas - Databases are replicas (copies) are used to make the database more consistent and increase performance
 	- Read replicas handle read only queries reducing load on the main system
-	- Write replicas are where writes happen ensuring consistency and pushing to read replicas
+	- Write replicas are where writes happen ensuring consistency and pushing to read replicas. 
+      - In this case we write to a "master" and the replicas which push to the read replicas ( or are read directly ) are "slaves"
