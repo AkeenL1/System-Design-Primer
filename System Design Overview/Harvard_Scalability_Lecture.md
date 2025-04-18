@@ -56,9 +56,60 @@
       * Multiple ways to store session state in such a way multiple servers can access it ( mysql etc.)
       * We can create redundancy to avoid a single point of failure
     * Session Cookies
+      * Generate a cookie that contains session data and store it on the browser
+      * For example we could say what server we were on
+      * Rather we could store a big number and its the load balancers jobs to figure out where to go
   * Nowadays there are many software implementations of load balancers
     * Elastic Load Balance (AWS), HAProxy are two examples
-    * 
+
+#### Caching
+ * SQL Cache
+   * DB cache
+ * Memcached
+   * RAM server cache
+   * Eventually if cache exceeds ram, you can remove old data
+   * We need to properly update the cache items when they get hit
+
+#### Replication
+ * Generally we have a master database the gets read and writes
+ * The master has n slaves that data gets copied to
+   * If the master dies we have redundancy
+ * This also increase ***performance*** by forcing reads to certain slaves and writes to master
+   * We can still maintain redundancy by having multiple masters
+   * Reads can go through another load balancer
+ * In this case a load balancer is a single point of failure
+   * We can create redundancy by having two load balancers
+   * It can operate in active-active where two load balancers receive traffic and send heartbeats to each otehr
+   * Or active-passive where one receives traffic and if it dies the other gets the traffic
+ * We can also ***partition*** the data
+   * Such as putting certain users by last name on certain dbs
+ * High Availability ( HA )
+   * The term for all of this, databases or load balancers taking over if one goes down
+
+#### Security
+ * We should only allow certain amounts of network requests to our web hosts
+   * tcp:80, 443, ssh etc.
+ * Internal traffic can be unencrypted
+ * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
