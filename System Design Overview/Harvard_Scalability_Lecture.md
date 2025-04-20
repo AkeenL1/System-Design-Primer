@@ -5,7 +5,7 @@
 * Shared Hosts - Multiple websites shared on the same machine competing for resources
 
 #### Alternatives to Web Hosting 
-* VPSes
+* VPS's
   * Virtual Private Server
   * You may still be hosted on the same machine but you're in a private virtual environment ( virtual machine )
   * This means for all intents you get your own resources
@@ -90,7 +90,6 @@
  * We should only allow certain amounts of network requests to our web hosts
    * tcp:80, 443, ssh etc.
  * Internal traffic can be unencrypted
- * 
 
 
 
